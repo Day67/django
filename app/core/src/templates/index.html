@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+<!-- Variables de entorno de html: -->
+{% block titulo %} Landing Dog Package {% endblock %}
+
+{% block contenido %}
+  {% load static %}
+<body>
+	<header class="hero">
+		<nav>
+			<a href="">Inicio</a>
+			<a href="#quienes-somos">¿Quiénes somos?</a>
+		</nav>
+		<section>
+		<div class="textos-hero">
+			<h1>¡Bienvenido a Dog Package!</h1>
+			<p>Porque nuestro objetivo es consentir a su mascota</p>
+			<a href="{% url 'contacto' %}">Contáctanos</a>
+		</div>
+		<div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+		</section>
+	</header>
+	
+	<section class="wave-contenedor website">
+		<img src="{% static 'assets/media/img/ilustracion2.jpg' %}" alt="Como funcionamos">
+		<div class="contenedor-textos-main">
+			<h2 class="titulo left">¿Cómo funciona?</h2>
+			<p class="parrafo">Dog package es una página web diseñada para proporcionar interacción entre clientes que tengan perros, y empresas que les puedan brindar múltiples servicios a ellos. Para ello ambas partes deberán registrarse según el tipo de usuario que desean ser.
+            <br><br>
+ 		    En el momento en el que el cliente elija el paquete que más se adapta a sus necesidades, podrá seleccionar también una de las tantas empresas que aparecerán como opción. Una vez que el cliente haya adquirido el servicio, si lo desea, podrá entonces realizar un comentario y calificarlo.</p>
+			<a href="" class="cta">Subir</a>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="contenedor">
+			<h2 class="titulo left">¿A quién nos dirigimos?</h2>
+			<p>Este sistema va dirigido para dos tipos de usuarios; el primero serán el de los clientes, los cuales podrán registrarse y escoger libremente la o las empresas que se acomoden a lo que necesitan, el segundo será el de las empresas, quienes tendrán la posibilidad de registrar todos los servicios que ofrecerán para satisfacer las necesidades del dueño del perro.</p>			
+		</div>
+	</section>
+
+	<section class="cards contenedor">
+		<h2 class="titulo">Algunos de los servicios</h2>
+		<div class="content-cards">
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion3.jpg' %}" alt="Baño perros" style="height: 80px; overflow: hidden"  style="height: 100%; width: 100%">
+				<h3>Baño para tus perros</h3>
+				<p>Aquí encontraras las empresas de baño.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion4.jpg' %}" alt="Paseo perros" style="height: 80px; overflow: hidden" style="height: 100%; width: 100%">
+				<h3>Paseo para tus perros</h3>
+				<p>Aquí encontraras las empresas de paseo.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion5.jpg' %}" alt="Veterinaria perros" style="height: 80px; overflow: hidden" style="height: 100%; width: 100%">
+				<h3>Veterinaria para tus perros</h3>
+				<p>Aquí encontraras las empresas veterinarias.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion6.jpg' %}" alt="Funeraria perros" style="height: 80px; overflow: hidden" style="height: 100%; width: 100%">
+				<h3>Funeraria para tus perros</h3>
+				<p>Aquí encontraras las empresas funerarias.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion7.jpg' %}" alt="Helados perros" style="height: 80px; overflow: hidden" style="height: 100%; width: 100%">
+				<h3>Helados para tus perros</h3>
+				<p>Aquí encontraras las empresas de helados.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+			<article class="card">
+				<img src="{% static 'assets/media/img/ilustracion8.jpg' %}" alt="Guarderia perros" style="height: 80px; overflow: hidden" style="height: 100%; width: 100%">
+				<h3>Guarderia para tus perros</h3>
+				<p>Aquí encontraras las empresas de guarderia.</p>
+				<a href="" class="cta">Subir</a>
+			</article>
+		</div>
+	</section>
+
+			<section class="galeria">
+				<div class="contenedor">
+					<h2 class="titulo">Nuestra funcionalidad principal es... </h2>
+					<article class="galeria-cont">
+						<img src="{% static 'assets/media/img/ilustracion9.jpg' %}"  alt="funcionalidad">
+						<img src="{% static 'assets/media/img/ilustracion10.jpg' %}" alt="funcionalidad">
+						<img src="{% static 'assets/media/img/ilustracion11.jpg' %}" alt="funcionalidad">
+						<img src="{% static 'assets/media/img/ilustracion12.jpg' %}" alt="funcionalidad">
+						<img src="{% static 'assets/media/img/ilustracion13.jpg' %}" alt="funcionalidad">
+						<img src="{% static 'assets/media/img/ilustracion14.jpg' %}" alt="funcionalidad">
+					</article>
+					<p> Brindarles a los usuarios la posibilidad de registrarse según su necesidad. Todo ello con el objetivo de darle a las personas que tienen perros, la alternativa de elegir entre las empresas la opción que más se adapte a lo que buscan; y a las empresas, ofrecerles la oportunidad de que se hagan conocer por medio de esta.</p>
+				</div>
+			</section>
+{% block nosotros %}
+  {% load static %}
+			<section id="quienes-somos" class="info-last">
+				<div class="contenedor last-section">
+					<div class="contenedor-textos-main">
+						<h2 class="titulo left">¿Quiénes somos?</h2>
+						<p>Somos un equipo de programadoras que trabaja arduamente por lograr sus metas; sin experiencia laboral pero con ganas de aprender constantemente y de ser emprendedoras.
+						</p>
+						<br>
+						<a href="{% url 'nosotros' %}" class="cta">Saber más de nosotras</a>
+					</div>
+					<img src="{% static 'assets/media/img/Nosotras.jpg' %}" alt="Nosotras">
+				</div>
+	{% endblock %}
+	</body>
+</html>
+{% endblock %}
