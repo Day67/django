@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+{% load static %}
+
+<header class="hero">
+	<nav class="menu">
+		<a href="{% url 'index' %}">Inicio</a>
+        <a href="{% url 'nosotros' %}">Nosotros</a>
+        <a href="">Presentación</a>
+        <a href="{% url 'contacto' %}">Contactanos</a>
+    </nav>
+    <section>
+    	<div class="textos-hero">
+    		<h1>¿Quieres saber más de nosotras?</h1>
+    		<p>Hecha un vistazo</p>
+    		<a href="#¿Quienes Somos?">Conocenos</a>
+    	</div>
+    	<div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </section>
+</header>
+
+    <section id="¿Quienes Somos?" class="cards contenedor">
+        <h2 class="titulo">¿Quienes Somos?</h2>
+        <br><br>
+        <div class="content-cards">
+            {% if object_list %}
+            {% for usuario in object_list %}
+        	<article class="card">
+        		<img src="{% static 'assets/media/' %}{{usuario.fotoUser}}" alt="Foto usuario" style="height: 80px; overflow: hidden"  style="height: 100%; width: 100%">
+        		<h3>{{usuario.nombreUser}}</h3>
+        		<p>{{usuario.generoUser}}<br>{{usuario.profecionUser}}<br> {{usuario.telUser}}<br>
+                   </p>
+        	</article>
+            {% endfor %}
+           {% endif %}
+        </div>
+    </section>
+
+    <div class="svg-wave" style="height: 100px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #86C5DE;"></path></svg></div>
+        <footer>
+            <div class="container-footer" style="background: #86C5DE; color: #fff; padding: 20px; text-align: center;">
+                <div class="copyrigth" style="font-size: 20px;">
+                    Dog Package | Maria camila Zuluaga | Dayhana Vélez
+                </div>
+                <img id="icono" src="{% static 'assets/media/img/icono.png' %}" alt="icono empresa"style="padding: 10px; text-align: center; width: 100px; height: 100px; max-width: 50%; border-radius: 50%;">
+            </div>
+        </footer>
+{% endblock %} 
+
+

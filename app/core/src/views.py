@@ -3,6 +3,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse
 from .forms import ContactForm
 from django.core.mail import EmailMessage
+
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -11,13 +12,6 @@ class HomePageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
     	return render(request, self.template_name, {})
-
-class NosotrosPageView(TemplateView):
-
-   	template_name = "nosotros.html"
-
-   	def get(self, request, *args, **kwargs):
-   		return render(request, self.template_name, {})
 
 #Vista basada en función
 def contacto(request):
